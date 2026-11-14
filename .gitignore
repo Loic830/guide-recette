@@ -1,0 +1,23 @@
+# Le guide généré et son cache (propres à chaque collection)
+Guide.html
+Guide.html.tmp
+.guide/cache.json
+
+# Les recettes elles-mêmes restent sur ton ordinateur
+*.pdf
+*.PDF
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.heic
+*.HEIC
+*.webp
+
+# Divers
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
