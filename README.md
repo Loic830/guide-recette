@@ -36,8 +36,12 @@ sans Internet ni serveur.
    - **La première fois**, il installe ses outils (1 à 3 minutes, connexion
      Internet requise). Si macOS demande d'installer les « outils de ligne de
      commande », accepte, puis relance.
-   - Si macOS refuse d'ouvrir le fichier, fais un **clic droit → Ouvrir**, puis
-     confirme. Ce n'est nécessaire qu'une seule fois.
+   - **La toute première fois**, macOS bloque le fichier (« Apple n'a pas pu
+     vérifier… »). Appuie sur **OK / Terminé** (pas « Placer dans la corbeille »),
+     puis va dans **Réglages Système → Confidentialité et sécurité**, descends
+     jusqu'à « Rafraîchir le guide » et clique **Ouvrir quand même**. Le script
+     retire alors lui-même le blocage : les fois suivantes, un simple double-clic
+     suffit, sans mot de passe.
 4. `Guide.html` s'ouvre dans ton navigateur. 🎉
 
 > Si le double-clic ne fait rien, ouvre le Terminal et tape `chmod +x ` (avec

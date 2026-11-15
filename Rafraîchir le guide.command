@@ -3,6 +3,10 @@
 # après avoir ajouté, retiré ou renommé des recettes.
 
 cd "$(dirname "$0")" || exit 1
+
+# Retire l'étiquette « quarantaine » que macOS pose sur les fichiers téléchargés :
+# après la toute première ouverture, macOS ne redemandera plus de confirmation.
+xattr -dr com.apple.quarantine . 2>/dev/null
 ENV_DIR="$HOME/Library/Application Support/GuideRecettes/venv"
 PY="$ENV_DIR/bin/python3"
 
