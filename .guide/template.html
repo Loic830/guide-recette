@@ -30,6 +30,21 @@ h1 span{color:var(--accent)}
 .dice{background:var(--accent);color:#fff;border:0;border-radius:999px;padding:11px 18px;font-weight:600;box-shadow:var(--shadow);white-space:nowrap}
 .dice:active{transform:scale(.97)}
 
+/* Mode d'emploi */
+.help{margin:12px 0 4px;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.help summary{cursor:pointer;padding:12px 16px;font-size:17px;font-weight:600;color:var(--accent);list-style:none;display:flex;align-items:center;gap:8px}
+.help summary::-webkit-details-marker{display:none}
+.help summary::after{content:"▾";margin-left:auto;transition:transform .2s}
+.help[open] summary::after{transform:rotate(180deg)}
+.help summary small{font-weight:400;color:var(--muted);font-size:14px}
+.help[open] summary small{display:none}
+.help h4{margin:6px 16px 8px;font-size:18px;font-family:var(--serif)}
+.help h4 span{font-weight:400;font-size:14px;color:var(--muted);font-family:var(--sans)}
+.help ol{margin:0;padding:0 18px 8px 44px;font-size:17px;line-height:1.5}
+.help li{margin:0 0 12px}
+.help li b{color:var(--accent)}
+.help .ps{margin:0 16px 16px;padding:10px 12px;background:var(--bg);border-radius:10px;font-size:15px;color:var(--muted)}
+
 /* Barre de recherche */
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 10px;border-bottom:1px solid var(--line)}
 .searchrow{display:flex;gap:8px}
@@ -117,6 +132,28 @@ mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
     </div>
     <button class="dice" id="dice">🎲 Qu'est-ce qu'on mange ?</button>
   </header>
+
+  <details class="help">
+    <summary>📖 Mode d'emploi <small>(appuie ici pour l'ouvrir)</small></summary>
+    <h4>🗂️ Ajouter ou enlever des recettes <span>(sur le Mac)</span></h4>
+    <ol>
+      <li><b>Ajouter une recette</b> : ouvre le dossier « guide-recettes » dans le Finder. Glisse le PDF ou la photo de la recette dans le bon dossier (Déjeuners, Soupers, Desserts…). Le nom du fichier devient le titre de la recette.</li>
+      <li><b>Enlever une recette</b> : dans ce même dossier, glisse le fichier de la recette dans la corbeille.</li>
+      <li><b>Mettre le guide à jour</b> : après avoir ajouté ou enlevé des recettes, fais un double-clic sur « <b>Rafraîchir le guide</b> » dans le dossier « guide-recettes ». Une fenêtre noire s'ouvre et travaille quelques secondes, puis le guide s'ouvre tout seul avec les changements. Tu peux ensuite fermer la fenêtre noire.</li>
+    </ol>
+    <p class="ps">Tant que tu n'as pas fait « Rafraîchir le guide », les recettes ajoutées ou enlevées ne changent pas dans le guide.</p>
+    <h4>🍽️ Utiliser le guide</h4>
+    <ol>
+      <li><b>Chercher une recette</b> : écris un mot dans la grande case 🔍 en haut, par exemple « poulet » ou « tarte ». Pas besoin des accents, et les petites fautes sont pardonnées.</li>
+      <li><b>Choisir une sorte de repas</b> : appuie sur un des boutons arrondis (Déjeuners, Soupers, Desserts…). Appuie sur « Toutes » pour tout revoir.</li>
+      <li><b>Lire une recette</b> : appuie sur sa photo. Pour revenir à la liste, appuie sur le <b>✕</b> en haut à droite.</li>
+      <li><b>Garder ses préférées</b> : appuie sur l'étoile ☆ ; elle devient jaune ★. Le bouton « ★ Favoris » montre ensuite seulement celles-là.</li>
+      <li><b>Écrire une note</b> : dans une recette, écris dans la case « 📝 Mes notes ». Pas besoin d'enregistrer, ça se fait tout seul.</li>
+      <li><b>Cuisiner avec ce qu'on a</b> : appuie sur « 🥕 Frigo », écris un ingrédient puis appuie sur la touche <b>Entrée</b>. Ajoute-en d'autres de la même façon : les recettes qui vont le mieux apparaissent en premier.</li>
+      <li><b>Pas d'idée ?</b> Appuie sur « 🎲 Qu'est-ce qu'on mange ? » et une recette est choisie au hasard.</li>
+    </ol>
+    <p class="ps">Bon à savoir : les étoiles et les notes restent seulement sur cet appareil-ci (cet ordinateur ou cette tablette).</p>
+  </details>
 
   <div class="bar">
     <div class="searchrow">
@@ -474,8 +511,7 @@ document.addEventListener("keydown", function(e){ if (e.key === "Escape" && curr
 
 /* ---------- démarrage ---------- */
 var d = new Date(DATA.generated * 1000);
-$("meta").textContent = R.length + " recettes · mis à jour le " + d.toLocaleDateString("fr-CA", {day:"numeric", month:"long", year:"numeric"}) +
-  (IOS ? "" : " · pour ajouter des recettes : double-clique « Rafraîchir le guide » dans le dossier");
+$("meta").textContent = R.length + " recettes · mis à jour le " + d.toLocaleDateString("fr-CA", {day:"numeric", month:"long", year:"numeric"});
 render();
 if (location.hash){ var r0 = byId(decodeURIComponent(location.hash.slice(1))); if (r0) openRecipe(r0); }
 })();
