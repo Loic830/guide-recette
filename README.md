@@ -51,13 +51,15 @@ commande** (pas besoin de VS Code ni de Xcode au complet).
 Dans le Terminal, copie et colle cette ligne, puis appuie sur Entrée :
 
 ```bash
-cd ~/Desktop && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip
+cd ~/Desktop && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip
 ```
 
-Sur ton **Bureau**, tu trouveras alors :
-- un dossier **`guide-recette-main`** : c'est ton guide. Renomme-le comme tu veux
-  (par exemple « Guide recettes ») et déplace-le où tu veux ;
-- un fichier **`guide.zip`** : il ne sert plus, mets-le à la corbeille.
+Le fichier **`guide.zip`** apparaît sur ton **Bureau**. Ensuite :
+1. **Double-clique** sur `guide.zip` : macOS crée un dossier **`guide-recette-main`**.
+   C'est ton guide.
+2. Renomme ce dossier comme tu veux (par exemple « Guide recettes ») et
+   déplace-le où tu veux.
+3. Mets `guide.zip` à la corbeille, il ne sert plus.
 
 Téléchargé de cette façon, le fichier « Rafraîchir le guide » n'est pas bloqué par
 macOS : aucun avertissement de sécurité, même après avoir renommé ou déplacé le
