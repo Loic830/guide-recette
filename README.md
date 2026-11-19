@@ -51,14 +51,14 @@ commande** (pas besoin de VS Code ni de Xcode au complet).
 Dans le Terminal, copie et colle cette ligne, puis appuie sur Entrée :
 
 ```bash
-cd ~/Documents && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip && mv guide-recette-main "Guide recettes" && rm guide.zip && open "Guide recettes"
+cd ~/Desktop && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip && mv guide-recette-main "Guide recettes" && rm guide.zip && open "Guide recettes"
 ```
 
-Elle télécharge le guide, le place dans **Documents → Guide recettes** et ouvre
-le dossier dans le Finder. Téléchargé de cette façon, le fichier « Rafraîchir le
+Elle télécharge le guide, le place sur ton **Bureau**, dans un dossier
+**Guide recettes**, et ouvre ce dossier dans le Finder. Téléchargé de cette façon, le fichier « Rafraîchir le
 guide » n'est pas bloqué par macOS : aucun avertissement de sécurité.
 
-> ⚠️ S'il existe déjà un dossier « Guide recettes » dans Documents, renomme-le
+> ⚠️ S'il existe déjà un dossier « Guide recettes » sur ton Bureau, renomme-le
 > d'abord, sinon la commande s'arrête.
 >
 > 💡 Pour que le guide soit aussi sur ton iPad ou ton iPhone, active
@@ -69,7 +69,7 @@ guide » n'est pas bloqué par macOS : aucun avertissement de sécurité.
 <summary>Autre méthode : télécharger le ZIP depuis GitHub (sans Terminal)</summary>
 
 1. Sur la page GitHub, bouton vert **Code → Download ZIP**, puis décompresse-le
-   et place le dossier où tu veux (par exemple dans Documents).
+   et place le dossier où tu veux (par exemple sur ton Bureau).
 2. **La toute première fois** que tu double-cliques sur « Rafraîchir le guide »,
    macOS bloque le fichier (« Apple n'a pas pu vérifier… »). Appuie sur
    **OK / Terminé** (pas « Placer dans la corbeille »), puis va dans
