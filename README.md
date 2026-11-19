@@ -51,16 +51,18 @@ commande** (pas besoin de VS Code ni de Xcode au complet).
 Dans le Terminal, copie et colle cette ligne, puis appuie sur Entrée :
 
 ```bash
-cd ~/Desktop && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip && mv guide-recette-main "Guide recettes" && rm guide.zip && open "Guide recettes"
+cd ~/Desktop && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip
 ```
 
-Elle télécharge le guide, le place sur ton **Bureau**, dans un dossier
-**Guide recettes**, et ouvre ce dossier dans le Finder. Téléchargé de cette façon, le fichier « Rafraîchir le
-guide » n'est pas bloqué par macOS : aucun avertissement de sécurité.
+Sur ton **Bureau**, tu trouveras alors :
+- un dossier **`guide-recette-main`** : c'est ton guide. Renomme-le comme tu veux
+  (par exemple « Guide recettes ») et déplace-le où tu veux ;
+- un fichier **`guide.zip`** : il ne sert plus, mets-le à la corbeille.
 
-> ⚠️ S'il existe déjà un dossier « Guide recettes » sur ton Bureau, renomme-le
-> d'abord, sinon la commande s'arrête.
->
+Téléchargé de cette façon, le fichier « Rafraîchir le guide » n'est pas bloqué par
+macOS : aucun avertissement de sécurité, même après avoir renommé ou déplacé le
+dossier.
+
 > 💡 Pour que le guide soit aussi sur ton iPad ou ton iPhone, active
 > **iCloud Drive → Dossiers Bureau et Documents** dans les Réglages Système
 > (section de ton compte Apple).
