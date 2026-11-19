@@ -27,22 +27,67 @@ sans Internet ni serveur.
 
 ## Installation (Mac)
 
-1. Télécharge ce dépôt (bouton vert **Code → Download ZIP**), décompresse-le et
-   place le dossier où tu veux, par exemple dans iCloud Drive → Documents.
-2. Range tes recettes dans des dossiers. Ceux qui sont fournis (Déjeuners,
-   Desserts, Soupers) sont des exemples : renomme-les, supprime-les ou ajoutes-en
-   d'autres.
-3. Double-clique sur **« Rafraîchir le guide »**.
+### Étape 1 — Installer Python (une seule fois)
+
+Le guide utilise Python, fourni par Apple avec les **outils de ligne de
+commande** (pas besoin de VS Code ni de Xcode au complet).
+
+1. Ouvre le **Terminal** (Cmd + Espace, tape « Terminal », Entrée).
+2. Copie cette ligne, colle-la dans le Terminal et appuie sur Entrée :
+   ```bash
+   xcode-select --install
+   ```
+3. Une fenêtre s'ouvre : clique **Installer**, accepte la licence et attends la
+   fin (5 à 15 minutes selon ta connexion).
+   - Si le Terminal répond « already installed », c'est que c'est déjà fait. 👍
+4. Vérifie que tout est en place :
+   ```bash
+   python3 --version
+   ```
+   Tu dois voir quelque chose comme `Python 3.9.6`.
+
+### Étape 2 — Télécharger le guide
+
+Dans le Terminal, copie et colle cette ligne, puis appuie sur Entrée :
+
+```bash
+cd ~/Documents && curl -L https://github.com/Loic830/guide-recette/archive/refs/heads/main.zip -o guide.zip && unzip -q guide.zip && mv guide-recette-main "Guide recettes" && rm guide.zip && open "Guide recettes"
+```
+
+Elle télécharge le guide, le place dans **Documents → Guide recettes** et ouvre
+le dossier dans le Finder. Téléchargé de cette façon, le fichier « Rafraîchir le
+guide » n'est pas bloqué par macOS : aucun avertissement de sécurité.
+
+> ⚠️ S'il existe déjà un dossier « Guide recettes » dans Documents, renomme-le
+> d'abord, sinon la commande s'arrête.
+>
+> 💡 Pour que le guide soit aussi sur ton iPad ou ton iPhone, active
+> **iCloud Drive → Dossiers Bureau et Documents** dans les Réglages Système
+> (section de ton compte Apple).
+
+<details>
+<summary>Autre méthode : télécharger le ZIP depuis GitHub (sans Terminal)</summary>
+
+1. Sur la page GitHub, bouton vert **Code → Download ZIP**, puis décompresse-le
+   et place le dossier où tu veux (par exemple dans Documents).
+2. **La toute première fois** que tu double-cliques sur « Rafraîchir le guide »,
+   macOS bloque le fichier (« Apple n'a pas pu vérifier… »). Appuie sur
+   **OK / Terminé** (pas « Placer dans la corbeille »), puis va dans
+   **Réglages Système → Confidentialité et sécurité**, descends jusqu'à
+   « Rafraîchir le guide » et clique **Ouvrir quand même**. Le script retire alors
+   lui-même le blocage : les fois suivantes, un simple double-clic suffit.
+
+</details>
+
+### Étape 3 — Ajouter tes recettes et lancer le guide
+
+1. Range tes recettes (PDF ou photos) dans des dossiers. Ceux qui sont fournis
+   (Déjeuners, Desserts, Soupers) sont des exemples : renomme-les, supprime-les ou
+   ajoutes-en d'autres.
+2. Double-clique sur **« Rafraîchir le guide »**.
    - **La première fois**, il installe ses outils (1 à 3 minutes, connexion
-     Internet requise). Si macOS demande d'installer les « outils de ligne de
-     commande », accepte, puis relance.
-   - **La toute première fois**, macOS bloque le fichier (« Apple n'a pas pu
-     vérifier… »). Appuie sur **OK / Terminé** (pas « Placer dans la corbeille »),
-     puis va dans **Réglages Système → Confidentialité et sécurité**, descends
-     jusqu'à « Rafraîchir le guide » et clique **Ouvrir quand même**. Le script
-     retire alors lui-même le blocage : les fois suivantes, un simple double-clic
-     suffit, sans mot de passe.
-4. `Guide.html` s'ouvre dans ton navigateur. 🎉
+     Internet requise).
+3. `Guide.html` s'ouvre dans ton navigateur. 🎉
 
 > Si le double-clic ne fait rien, ouvre le Terminal et tape `chmod +x ` (avec
 > l'espace), glisse le fichier « Rafraîchir le guide » dans la fenêtre, puis appuie
