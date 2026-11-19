@@ -97,6 +97,23 @@ dossier.
 > l'espace), glisse le fichier « Rafraîchir le guide » dans la fenêtre, puis appuie
 > sur Entrée.
 
+### Étape 4 — (Facultatif) Créer un raccourci vers le guide
+
+Pour ouvrir le guide rapidement, depuis le Bureau ou le Dock par exemple, crée un
+**alias**. C'est aussi la bonne façon de donner au guide le nom que tu veux.
+
+1. Fais un clic droit sur `Guide.html`, puis choisis **Créer un alias**.
+2. **Renomme l'alias** comme tu veux (ex. « 🍳 Nos recettes ») et déplace-le où tu
+   veux : sur le Bureau, dans le Dock (à droite de la ligne de séparation), dans
+   un autre dossier…
+
+L'alias ouvre toujours le vrai guide, à jour, avec tes favoris et tes notes.
+
+- L'alias fonctionne **seulement sur ce Mac**. Sur l'iPad ou l'iPhone, ouvre
+  `Guide.html` directement dans le dossier du guide.
+- Si un jour il ne trouve plus le guide (« l'original est introuvable »),
+  supprime-le et recrées-en un.
+
 ## Utilisation au quotidien
 
 | Je veux… | Je fais… |
@@ -109,6 +126,26 @@ dossier.
 
 Le rafraîchissement ne traite que les fichiers nouveaux ou modifiés : c'est
 instantané quand rien n'a changé.
+
+### ⚠️ Ne renomme pas et ne déplace pas `Guide.html`
+
+`Guide.html` doit garder **ce nom** et rester **à la racine** du dossier du guide,
+à côté de « Rafraîchir le guide ».
+
+- **Si tu le renommes**, le prochain rafraîchissement crée un nouveau `Guide.html` :
+  le fichier renommé n'est plus jamais mis à jour.
+- **Si tu le déplaces** hors du dossier, c'est la même chose. En plus, les boutons
+  « Ouvrir le PDF » ne fonctionnent plus, car le guide cherche les PDF à côté de
+  lui.
+- **Les favoris et les notes** sont liés à l'emplacement du fichier : un guide
+  renommé ou déplacé peut repartir sans favoris ni notes.
+
+Tu peux par contre **renommer ou déplacer le dossier du guide en entier**
+(par exemple du Bureau vers Documents). Fais-le de préférence avant de commencer
+à mettre des favoris et des notes, pour la même raison.
+
+> 💡 Pour ouvrir le guide depuis ailleurs ou lui donner un autre nom, utilise un
+> **alias** (voir l'[étape 4](#étape-4--facultatif-créer-un-raccourci-vers-le-guide)).
 
 ### Bon à savoir
 
